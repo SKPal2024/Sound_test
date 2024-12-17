@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sound Measurement with Color Scales</title>
+  <link rel="stylesheet" href="sound.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sound Measurement with Color Scales</h1>
+    <button id="startButton" onclick="startMeasurement()">Start Measurement</button>
+    <button id="stopButton" onclick="stopMeasurement()" disabled>Stop Measurement</button>
+
+    <div id="output">
+      <h2>Sound Levels</h2>
+      <p>Current Decibel Level: <span id="decibelValue">0</span> dB</p>
+      <p>Highest Decibel Level: <span id="highestDecibel">0</span> dB</p>
+
+      <h2>Frequency Analysis</h2>
+      <p>Current Dominant Frequency: <span id="currentFrequency">0</span> Hz</p>
+      <p>Highest Frequency: <span id="highestFrequency">0</span> Hz</p>
+      <p>Lowest Frequency: <span id="lowestFrequency">0</span> Hz</p>
+    </div>
+
+    <div class="scales">
+      <div class="scale">
+        <h3>Sound Intensity Scale (dB)</h3>
+        <div class="color-scale intensity-scale"></div>
+      </div>
+
+      <div class="scale">
+        <h3>Frequency Scale (Hz)</h3>
+        <div class="color-scale frequency-scale"></div>
+      </div>
+    </div>
+
+    <p id="error" style="color: red;"></p>
+  </div>
+
+  <script src="sound.js"></script>
+</body>
+</html>
